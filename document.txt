@@ -1,0 +1,66 @@
+MVC
+--------
+stands for Model View Controller
+
+Its an architectural pattern.
+
+Governs the whole architecture of our application.
+
+Normal design patterns used to solve specific
+technical problems while these pattern is used to 
+solve huge problems.
+
+
+Its divides a software in 3 patterns
+=> Model
+=> View
+=> Controller
+and all have their own purpose.
+
+
+user 
+=> request for specific page or data
+------------------------------------------------------
+=> to a specific Controller which handles 
+the request flow
+It should never interact with data logic.
+Controller have nothing to do with data. It only 
+sends and recieves data to or from Model and responds
+based on what Model returns.
+------------------------------------------------------
+=> Model gets data as it handles data logic like
+validating, updating, saving, deleting etc. and 
+interacts with database.
+Model dont have to do anything with user request and 
+what to do on failure or success.
+------------------------------------------------------
+After Controller gets data from Model it interacts
+with View
+to render data to user.
+View will be a template file that dynamically 
+renders html file.
+It handles the data presentation.
+View dont cares about how to handle the final 
+presentation but only cares about presenting the 
+data & sends back to controller.
+
+
+
+And now the controller will send back the response 
+to user.
+
+
+These Model And View never interacts with each other.
+
+
+
+Ex-
+
+User requests for all Mobiles
+than 
+Controller get cat data from View
+than
+Controller gets Mobile presentation
+and than send it to user if success
+otherwise 
+will show error.
